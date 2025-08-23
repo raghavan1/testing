@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Prompt + Image → 10 Variants</title>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<header class="container">
+		<h1>Prompt + Image → 10 Variants</h1>
+		<p>Enter a prompt, add a reference image, and generate 10 matching images.</p>
+	</header>
+	<main class="container">
+		<form id="gen-form">
+			<label class="field">
+				<span>Prompt</span>
+				<input id="prompt" type="text" required placeholder="e.g., product shots on white background" />
+			</label>
+			<label class="field">
+				<span>Reference image</span>
+				<input id="image" type="file" accept="image/*" />
+			</label>
+			<button id="submit" type="submit">Generate 10 images</button>
+		</form>
+
+		<section id="status" class="status"></section>
+		<section id="grid" class="grid" aria-live="polite"></section>
+	</main>
+	<footer class="container foot">Made quickly. Replace stub API later.</footer>
+	<script src="main.js"></script>
+</body>
+</html>

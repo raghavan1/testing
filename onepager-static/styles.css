@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+:root { color-scheme: light dark; --bg:#0b0b0c; --fg:#e7e7ea; --muted:#9aa0a6; --accent:#6ea8fe; }
+html, body { margin:0; padding:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+body { background: var(--bg); color: var(--fg); }
+.container { max-width: 960px; margin: 0 auto; padding: 24px; }
+h1 { margin: 0 0 8px; font-size: 28px; }
+p { margin: 0 0 16px; color: var(--muted); }
+form { display: grid; grid-template-columns: 1fr 1fr auto; gap: 12px; align-items: end; margin-bottom: 16px; }
+.field { display: grid; gap: 6px; }
+.field span { font-size: 12px; color: var(--muted); }
+input[type="text"], input[type="file"] { padding: 10px; border: 1px solid #2a2a2d; border-radius: 8px; background: #141416; color: var(--fg); }
+button { padding: 10px 14px; border: 1px solid #2a2a2d; border-radius: 8px; background: #1b1c20; color: var(--fg); cursor: pointer; }
+button:disabled { opacity: 0.6; cursor: progress; }
+.status { min-height: 20px; margin: 12px 0; color: var(--muted); }
+.grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.grid .card { position: relative; border: 1px solid #2a2a2d; border-radius: 10px; overflow: hidden; background: #111; aspect-ratio: 1/1; display: grid; place-items: center; }
+.grid img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.grid .meta { position: absolute; bottom: 6px; left: 6px; font-size: 11px; background: rgba(0,0,0,0.55); padding: 4px 6px; border-radius: 6px; }
+.foot { opacity: 0.7; font-size: 12px; }
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(3, 1fr); } form { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .grid { grid-template-columns: repeat(2, 1fr); } }
